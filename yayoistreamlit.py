@@ -46,9 +46,9 @@ def automate_browser(output, output2, output3, output4, output5, output6):
           
 
           # webdriver_managerによりドライバーをインストール
-    CHROMEDRIVER = ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
-    service = fs.Service(CHROMEDRIVER)
-    driver = webdriver.Chrome(options=options, service=service)
+        CHROMEDRIVER = ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
+        service = fs.Service(CHROMEDRIVER)
+        driver = webdriver.Chrome(options=options, service=service)
 
         
 
