@@ -18,6 +18,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.core.utils import ChromeType
+from selenium.webdriver.chrome import service as fs
 
 
 def automate_browser(output, output2, output3, output4, output5, output6):
