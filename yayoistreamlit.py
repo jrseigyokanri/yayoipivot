@@ -17,7 +17,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
-
+from webdriver_manager.core.utils import ChromeType
 
 
 def automate_browser(output, output2, output3, output4, output5, output6):
@@ -42,12 +42,14 @@ def automate_browser(output, output2, output3, output4, output5, output6):
 
 
 
-        options.set_capability("browserType", "chrome")
-        driver = webdriver.Chrome(ChromeDriverManager().install())
+        # CromeTypeクラスを新たにインポート
+          
 
-        chrome_service = ChromeService(executable_path='C:/Users/kozue/.wdm/drivers/chromedriver/win32/112.0.5615/chromedriver.exe')
-        driver = webdriver.Chrome(service=chrome_service, options=options)
-        
+          # webdriver_managerによりドライバーをインストール
+          CHROMEDRIVER = ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
+          service = fs.Service(CHROMEDRIVER)
+          driver = webdriver.Chrome(options=options, service=service)
+
         
 
         
